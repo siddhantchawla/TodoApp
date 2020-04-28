@@ -10,13 +10,12 @@ class Todos extends React.Component {
 
   render () {
     return this.props.todos.map((todo) => (
-      <TodoItem key = {todo.id} todo = {todo} markComplete = {this.props.markComplete}/>
+      <TodoItem key = {todo.id} todo = {todo} markComplete = {this.props.markComplete} delTodo = {this.props.delTodo}/>
     ));
   }
 }
 
 // PropTypes
-
 Todos.propTypes = {
   todos : PropTypes.array.isRequired
 }
